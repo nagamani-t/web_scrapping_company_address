@@ -1,0 +1,11 @@
+import * as {{lowercase collection_name}}Repository from '@/data-access/{{lowerCase collection_name}}.repo'
+
+
+const get{{lowerCase collection_name}} = async () => {
+
+    const user = await get{{lowerCase collection_name}}()
+
+    return user
+}
+
+export default get{{lowerCase collection_name}}

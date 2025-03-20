@@ -1,0 +1,9 @@
+import { Type } from '@sinclair/typebox'
+import { FastifySchema } from 'fastify'
+
+export const get{{lowerCase collection_name}}FastifySchema: FastifySchema = {
+  summary: 'Get all {{lowerCase collection_name}}s',
+  tags: ['{{pascalCase collection_name}}'],
+  security: [{}],
+  response: {}
+}
