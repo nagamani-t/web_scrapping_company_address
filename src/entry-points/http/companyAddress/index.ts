@@ -11,7 +11,7 @@ import { fetchCompanyAddress } from '@/data-access/companyAddress'
   ): Promise<void> => {
     fastify
       .withTypeProvider<TypeBoxTypeProvider>()
-      .post('/company-address', async function (request, reply) {
+      .post('/', async function (request, reply) {
        const companyAddress =  await fetchCompanyAddress(request)
         return companyAddress
       })

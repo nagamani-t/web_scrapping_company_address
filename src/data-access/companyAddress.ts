@@ -74,9 +74,8 @@ import {
   
     try {
       const browser = await puppeteer.launch({
-       executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
         args: ['--no-sandbox', '--disable-setuid-sandbox'],
-        headless: true,
+        headless: false,
       });
       const page = await browser.newPage();
       await page.goto(url, { waitUntil: 'networkidle2' });
@@ -113,7 +112,6 @@ import {
       });
   
       await browser.close();
-  
       if (!data || data.length === 0) {
         return {
           status: FAILURE,
