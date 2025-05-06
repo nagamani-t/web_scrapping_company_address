@@ -1,1 +1,0 @@
-{"version":3,"file":"get-example.schema.js","sourceRoot":"","sources":["../../../../../src/domain/example/use-cases/get-example/get-example.schema.ts"],"names":[],"mappings":";;;AACA,2DAAkE;AAErD,QAAA,oBAAoB,GAAkB;IACjD,OAAO,EAAE,kBAAkB;IAC3B,IAAI,EAAE,CAAC,SAAS,CAAC;IACjB,QAAQ,EAAE,CAAC,EAAE,CAAC;IACd,QAAQ,EAAE;QACR,GAAG,EAAE,0CAAyB;KAC/B;CACF,CAAA"}

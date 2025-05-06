@@ -1,7 +1,4 @@
-import {
-  TypeBoxTypeProvider,
-  FastifyPluginAsyncTypebox
-} from '@fastify/type-provider-typebox'
+import { FastifyPluginAsyncTypebox, TypeBoxTypeProvider } from "@fastify/type-provider-typebox"
 
 const root: FastifyPluginAsyncTypebox = async (
   fastify,

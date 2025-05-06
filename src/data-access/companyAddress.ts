@@ -74,8 +74,8 @@ import {
   
     try {
       const browser = await puppeteer.launch({
+        headless: true,
         args: ['--no-sandbox', '--disable-setuid-sandbox'],
-        headless: false,
       });
       const page = await browser.newPage();
       await page.goto(url, { waitUntil: 'networkidle2' });
@@ -120,7 +120,7 @@ import {
       }
       console.log('Filtered Scraped Data:', data);
       const addressresponse = {
-        addresses: data.map((item) => ({
+        addresses: data.map((item:any) => ({
           companyName: item.name,
           address: item.address,
         })),

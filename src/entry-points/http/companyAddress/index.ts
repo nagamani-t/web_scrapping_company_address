@@ -1,9 +1,7 @@
-import {
-    TypeBoxTypeProvider,
-    FastifyPluginAsyncTypebox
-  } from '@fastify/type-provider-typebox'
+
   
-import { fetchCompanyAddress } from '@/data-access/companyAddress'
+import { fetchCompanyAddress } from '@/data-access/companyAddress';
+import { FastifyPluginAsyncTypebox, TypeBoxTypeProvider } from '@fastify/type-provider-typebox';
   
   const example: FastifyPluginAsyncTypebox = async (
     fastify,
@@ -11,7 +9,7 @@ import { fetchCompanyAddress } from '@/data-access/companyAddress'
   ): Promise<void> => {
     fastify
       .withTypeProvider<TypeBoxTypeProvider>()
-      .post('/', async function (request, reply) {
+      .post('/', async function (request) {
        const companyAddress =  await fetchCompanyAddress(request)
         return companyAddress
       })

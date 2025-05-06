@@ -67,8 +67,8 @@ const scrapeAddressFromOpenCorporates = async (company) => {
     const url = `${process.env.OPEN_CORPORATES_URL}${encodeURIComponent(company)}`;
     try {
         const browser = await puppeteer_1.default.launch({
+            headless: true,
             args: ['--no-sandbox', '--disable-setuid-sandbox'],
-            headless: false,
         });
         const page = await browser.newPage();
         await page.goto(url, { waitUntil: 'networkidle2' });
